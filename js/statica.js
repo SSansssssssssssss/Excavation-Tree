@@ -141,7 +141,7 @@ addLayer("ES2", {
             cost: new Decimal("5e18"),
             unlocked() {return hasUpgrade("ES2", 32) && getBuyableAmount("ES2", 11).gte(7)},
             tooltip: "log10(sqrt(x/2)+1)",
-            effect() { return player.W.refinedwood.div(2).sqrt().plus(1).log10() },
+            effect() { return player.W.refinedwood.div(2).sqrt().plus(1).log10().plus(1) },
             effectDisplay() { return format(upgradeEffect("ES2", 33))+"x" }
         },
         34: {
@@ -343,4 +343,5 @@ addLayer("M2", {
         "prestige-button",
         ["microtabs", "stuff"]
     ]
+
 })
